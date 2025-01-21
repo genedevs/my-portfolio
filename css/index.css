@@ -1,0 +1,284 @@
+*{
+    box-sizing: border-box;
+    font-family: poppins,sans-serif;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+body{
+    overflow-x: hidden;
+   
+}
+/*This is for header*/
+.header{
+width: 100%;
+height: 100%;
+min-height: 100vh;
+background:#222 ;
+}
+.wrapper{
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+header{
+    padding: 40px  0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.logo{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo i{
+    height:45px;
+    width: 45px;
+    background-color:#f44336;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 10px;
+    margin-right: 15px;
+    cursor: pointer;
+    text-align: center;
+}
+.logo .logo-text{
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+}
+nav .togglebtn{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 45px;
+    right: 3%;
+    z-index: 5;
+    cursor: pointer;
+    display: none;
+}
+nav .togglebtn span{
+    display: block;
+    background-color:#f44336;
+    margin:5px 0px;
+    width: 100%;
+    height: 3px;
+    transition: 0.3s;
+    transition-property: transform, opacity;
+}
+nav .navbars{
+    list-style-type: none;
+}
+nav .navbars li{
+    display: inline-block;
+}
+nav .navbars li a{
+    color:#e5e5e5;
+    margin-right: 2.5rem;
+    transition: color 0.3s ease;
+    position: relative;
+    padding: 5px 0;
+}
+nav .navbars li a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #393e41;
+    transition: width 0.3s ease;
+}
+nav .navbars li a:hover{
+    color:#393e41 ;
+}
+nav .navbars li a:hover::after{
+    width: 100%;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top:4rem;
+}
+.container .prof-pic{
+    width: 400px;
+    height: 420px;
+    border-radius: 20%;
+    overflow: hidden;
+    border: 15px solid #444;
+    box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
+}
+.prof-pic img{
+    height: 100%;
+    width: 100%;
+  
+}
+.prof-pic:hover{
+    transform: scale(1.2);
+    transition: 0.5s;   
+}
+.intro-text{
+display: flex;
+max-width: 500px;
+flex-direction: column;
+gap: 15px;
+}
+.intro-text h5{
+    color: #e5e5e5;
+    font-size:15px;
+    margin: 0;
+}
+.intro-text h5 span{
+    color:#f44336;
+    font-size: 14px;
+   
+}
+.intro-text h1{
+    color: #f44336;
+    font-size: 3rem;  
+}
+.intro-text p{
+    color: #e5e5e5;
+    line-height: 1.5em;
+    margin: 0;
+}
+.btn-group{
+  margin: 45px 0;
+}
+.btn-group .btn{
+    border-color: #d5d5d5;
+    color: #fff;
+    background-color: #333;
+    padding: 12px 25px;
+    border-radius: 30px;
+    border: 2px solid #e5e5e5;
+    margin: 5px 0;
+    margin-right: 7px;
+    box-shadow: 0 10px 10px -8px rgb(0 0 0/ 78%);
+}
+
+.btn.active{
+    border-color:#f44336;
+}
+.intro-text .socials i{
+    color: #e5e5e5;
+    font-size: 18px;
+    margin-right: 10px;
+    transition: 0.5s;
+}
+.intro-text .socials i:hover{
+    color: #393e41 ;
+    transform: scaleY(30%);
+}
+
+@media (max-width: 930px) {
+    .container .prof-pic{
+        width: 470px;
+        height: 420px;
+       
+    }
+    
+    
+    .intro-text{
+        padding-left: 50px;
+    }
+    nav .togglebtn {
+        display: initial;
+    }
+ 
+
+    .click {
+        top: 45px;
+    }
+    
+
+    .click span {
+        position: absolute;
+        margin-top: 12px;
+    }
+
+    .click span:first-child {
+        transform: rotate(-40deg); /* Fixed typo from -40eg */
+    }
+
+    .click span:nth-child(2) {
+        opacity: 0;
+        margin: 0;
+    }
+
+    .click span:last-child {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    nav .navbars {
+        position: absolute;
+        top: 110px;
+        right: -100%;
+        bottom: 0;
+        width: 60%;
+        height: 80vh;
+        background-color: #222;
+        z-index: 3;
+        box-shadow: 5px 13px 30px rgba(0, 0, 0, 0.1);
+        transition: 0.5s;
+        padding: 25px 0px;
+    }
+
+    nav .navbars li {
+        display: block;
+    }
+
+    nav .navbars li a {
+        display: block;
+        margin-bottom: 15px;
+        text-align: center;
+        position: relative;
+        padding: 5px 0;
+        color: #e5e5e5;
+        transition: color 0.3s ease;
+    }
+
+    /* Remove the 45% left positioning and allow underline to span across full text */
+    nav .navbars li a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0; /* Start the underline from the left side */
+        width: 0;
+        height: 2px;
+        background-color: #393e41;
+        transition: width 0.3s ease;
+        margin-left: 20px;
+    }
+
+    /* Hover: Text color changes, and the underline expands to full width of the text */
+    nav .navbars li a:hover {
+        color: #393e41;
+    }
+
+    nav .navbars li a:hover::after {
+        width: 100%; /* Make the underline span across the entire text width */
+    }
+
+    nav .navbars.open {
+        right: 0;
+    }
+}
+
+@media(max-width:768px){
+    .container{
+        flex-direction: column;
+        padding-top: 2rem;
+    }
+    .intro-text{
+        padding: 40px 0px;
+    }
+}
+

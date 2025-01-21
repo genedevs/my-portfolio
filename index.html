@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My porfolio</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-g"></i>
+                    <div class="logo-text">Kenneth Dela Cruz</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navbars"> 
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Resume</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                <div class="prof-pic">
+                    <img src="images/me.jpg" alt="profile pic">
+                </div>
+                <div class="intro-text">
+                    <h5>Hi, I'm an aspiring<span class="jobTitle"> Web Developer</span></h5>
+                    <h1>Kenneth Delacruz</h1>
+                    <p>A fourth year student who’s passionate in becoming a
+                        web developer. I’m enthusiastic about creating
+                        interactive and responsive websites that deliver great
+                        user experiences. As I pursue my studies, I’m building a
+                        strong foundation in web development technologies  
+                       like HTML,CSS, and JavaScript. I’ve also started
+                        exploring other tools for web development like
+                        WordPress.
+                    </p>
+                    <div class="btn-group">
+                        <a href="assets/cv.pdf" class="btn active" download="My_CV.pdf">Download CV</a>
+                        <a href="#" class="btn">Contact</a>
+                    </div>
+                    <div class="socials">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <script>
+        var togglebtn=document.querySelector(".togglebtn");
+        var nav=document.querySelector(".navbars");
+        var links=document.querySelector(".navbars li");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        })
+
+       var typed=new Typed(".jobTitle",{
+            strings:["Web Developer"],
+            typedSpeed:70,
+            backSpeed:55,
+            loop:true
+       })
+
+    </script>
+    
+</body>
+</html>
